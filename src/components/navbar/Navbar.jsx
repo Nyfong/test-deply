@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { Link } from "react-router-dom";
 import logo1 from "../../assets/img/logo1.png";
 
 let Navbar = () => {
@@ -9,37 +9,36 @@ let Navbar = () => {
     setIsDarkMode(!isDarkMode);
   };
   return (
-    <div className="sticky top-0 bg-white">
+    <div className="sticky top-0 bg-white z-20">
       <header className=" sticky top-0 w-full ">
         <nav className="grid  grid-cols-2 sm:grid-cols-4 py-3 px-10">
           <div className="pl-3 col-span-1  flex items-center text-white">
-            <img src={logo1} alt="" className="h-[55px]" />
+            <img src={logo1} alt="logo" className="h-[55px] " />
           </div>
           <ul className=" flex items-center sm:gap-5 hidden md:gap-2  md:hidden lg:flex lg:col-span-2 pl-0 sm:pl-3 text-white ">
             <li className=" pl-3 ">
-              <a href="/" className="text-xs text-amber-500 md:text-lg">
+              <Link to="/" className="text-xs text-amber-500 md:text-lg">
                 Home
-              </a>
+              </Link>
             </li>
             <li className=" p-3">
-              <a href="/" className="text-xs text-amber-500 md:text-lg">
+              <Link
+                to="/servicepage"
+                className="text-xs text-amber-500 md:text-lg"
+              >
                 Service
-              </a>
+              </Link>
             </li>
             <li className=" p-3">
-              <a href="/" className="text-xs text-amber-500 md:text-lg">
+              <a as={Link} to="/" className="text-xs text-amber-500 md:text-lg">
                 Contact us
               </a>
             </li>
             <li className=" p-3">
-              <a href="/" className="text-xs text-amber-500 md:text-lg">
-                Agent
-              </a>
+              <a className="text-xs text-amber-500 md:text-lg">Agent</a>
             </li>
             <li className=" p-3">
-              <a href="/" className="text-xs text-amber-500 md:text-lg">
-                About us
-              </a>
+              <a className="text-xs text-amber-500 md:text-lg">About us</a>
             </li>
           </ul>
           {/* for sreach and login */}

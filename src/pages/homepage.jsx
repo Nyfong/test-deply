@@ -3,6 +3,7 @@ import SubBanner from "../components/seaction/SubBanner-homepage";
 import Details from "../components/seaction/homepage/Details-section";
 import CardShowTrending from "../components/cards/homepage/Card-show-trending";
 import ServiceSection from "../components/seaction/homepage/Service-section";
+import Footer from "../components/footer/Footer";
 let Homepage = () => {
   return (
     <div>
