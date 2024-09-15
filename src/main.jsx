@@ -9,6 +9,8 @@ import Homepage from "./pages/homepage.jsx";
 import DetailListingPage from "./pages/DetailsListing-page.jsx";
 import ServiceListing from "./pages/servicelisting-page.jsx";
 import SearchPage from "./pages/search-page.jsx";
+import LoginForm from "./pages/form/LoginForm.jsx";
+import SignUpForm from "./pages/form/SignupForm.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +35,14 @@ const router = createBrowserRouter([
       {
         path: "/searchpage",
         element: <SearchPage />,
+      },
+      {
+        path: "/login",
+        element: <LoginForm />,
+      },
+      {
+        path: "/signup",
+        element: <SignUpForm />,
       },
     ],
   },
