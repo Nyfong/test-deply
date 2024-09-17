@@ -15,7 +15,7 @@ let HerobannerServiePage = () => {
 
             <p className="mt-4 sm:text-xl/relaxed">
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt
-              illo tenetur fuga ducimus numquam ea!
+              illo tenetur fuga ducimus numquam e!
             </p>
 
             <div className="mt-8 flex flex-wrap justify-center gap-4">
