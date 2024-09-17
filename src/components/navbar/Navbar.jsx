@@ -9,7 +9,7 @@ let Navbar = () => {
     setIsDarkMode(!isDarkMode);
   };
   return (
-    <div className="sticky top-0 bg-white z-20">
+    <div className="sticky top-0 bg-white z-20  min-w-80">
       <header className=" sticky top-0 w-full ">
         <nav className="grid  grid-cols-2 sm:grid-cols-4 py-3 px-10">
           <div className="pl-3 col-span-1  flex items-center text-white">
@@ -17,28 +17,37 @@ let Navbar = () => {
           </div>
           <ul className=" flex items-center sm:gap-5 hidden md:gap-2  md:hidden lg:flex lg:col-span-2 pl-0 sm:pl-3 text-white ">
             <li className=" pl-3 ">
-              <Link to="/" className="text-xs text-amber-500 md:text-lg">
+              <Link
+                to="/"
+                className="text-body  text-amber-500 md:text-header-6"
+              >
                 Home
               </Link>
             </li>
             <li className=" p-3">
               <Link
                 to="/servicepage"
-                className="text-xs text-amber-500 md:text-lg"
+                className="text-body text-amber-500 md:text-header-6"
               >
                 Service
               </Link>
             </li>
             <li className=" p-3">
-              <a as={Link} to="/" className="text-xs text-amber-500 md:text-lg">
+              <a
+                as={Link}
+                to="/"
+                className="text-body text-amber-500 md:text-header-6"
+              >
                 Contact us
               </a>
             </li>
             <li className=" p-3">
-              <a className="text-xs text-amber-500 md:text-lg">Agent</a>
+              <a className="text-body text-amber-500 md:text-header-6">Agent</a>
             </li>
             <li className=" p-3">
-              <a className="text-xs text-amber-500 md:text-lg">About us</a>
+              <a className="text-body text-amber-500 md:text-header-6">
+                About us
+              </a>
             </li>
           </ul>
           {/* for sreach and login */}

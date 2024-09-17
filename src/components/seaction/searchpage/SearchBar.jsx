@@ -48,7 +48,7 @@ export function SearchBar() {
           <button
             id="dropdown-button"
             onClick={toggleDropdown}
-            className="flex-shrink-0 z-10 inline-flex items-center p-4 text-sm font-medium text-center text-black bg-amber-400 border border-gray-300 rounded-l-lg hover:bg-amber-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+            className="flex-shrink-0 z-10 inline-flex items-center p-4 text-sm font-medium text-center text-white bg-amber-400 border border-gray-300 rounded-l-lg hover:bg-amber-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
             type="button"
           >
             All Categories{" "}

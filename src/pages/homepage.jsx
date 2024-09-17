@@ -8,9 +8,9 @@ let Homepage = () => {
   return (
     <div>
       {/* Main section */}
-      <main className=" px-[30px] md:px-[100px] ">
+      <main className=" max-w-screen-xl min-w-80 mx-auto ">
         {/* hero banner */}
-        <section className=" mt-10 md:mt-0 grid grid-cols-1 md:grid-cols-2 md:p-3 md:gap-4">
+        <section className=" mb-10 md:mt-0 grid grid-cols-1 md:grid-cols-2 md:p-3 md:gap-4">
           <div className=" flex flex-col justify-center gap-5 ">
             <div className="flex gap-3">
               <i className="fa-solid fa-gears text-xl"></i>
@@ -78,7 +78,7 @@ let Homepage = () => {
         <Details />
       </section>
       {/* service section */}
-      <section>
+      <section className=" max-w-screen-xl min-w-80 mx-auto ">
         <ServiceSection />
       </section>
     </div>

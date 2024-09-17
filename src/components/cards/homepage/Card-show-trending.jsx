@@ -1,18 +1,31 @@
+import { SiRclone } from "react-icons/si";
+
 const items = [
   "Item 1",
   "Item 2",
   "Item 3",
   "Item 4",
-  "Item 1",
-  "Item 2",
-  "Item 3",
-  "Item 4",
+  "item 5",
+  "Item 6",
+  "Item 7",
+  "Item 8",
+];
+const images = [
+  "https://hairsalonbarrie.ca/wp-content/uploads/2022/10/mens-salon-thegem-blog-default.jpg",
+  "https://media.istockphoto.com/id/639607852/photo/hairstylist-serving-client-at-barber-shop.jpg?s=612x612&w=0&k=20&c=-kBoMs26KIX1Hl6uh_VLRHCtLxnLYyq9a0n7X8iu5MQ=",
+  "https://naomisheadmasters.com/wp-content/uploads/2023/10/Top-10-Salons-In-India.jpg",
+  "https://images.squarespace-cdn.com/content/v1/5e5833fa525bce01a601c802/1584724640173-ACZAM31SLXWM2Q1C0HWO/2020-03-19+16.42.31.jpg",
+  "https://pppenglish.sgp1.digitaloceanspaces.com/image/main/field/image/the_popular_dishes_of_gogi_train_restaurant_are_its_barbeque_selection_and_korean_spicy_crab_with_soy_sauce._yousos_apdoulrashim.jpg",
+  "https://retaildesignblog.net/wp-content/uploads/2018/05/K-Duck-Korean-restaurant-by-Design-Plus-Ho-Chi-Minh-City-Vietnam.jpg",
+  "https://www.agoda.com/wp-content/uploads/2019/03/Best-restaurants-in-Seoul-Fine-dining-Jungsik-Seoul-Mingles-restaurant.jpg",
+  "https://restaurantkronborg.dk/wp-content/uploads/2023/09/Restaurant-Kronborg-Billeder-58-1024x683.jpg",
+  "https://digital.ihg.com/is/image/ihg/crowne-plaza-quezon-city-9279036462-2x1",
 ];
 
 let CardTrending = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4 md:gap-4 md:p-5">
+      <div className=" mb-10  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  xl:grid-cols-4 md:gap-4 md:p-5">
         {items.map((item, index) => (
           <div key={index}>
             <a
@@ -20,9 +33,9 @@ let CardTrending = () => {
               className="block rounded-lg p-4 shadow-sm shadow-indigo-100"
             >
               <img
-                alt=""
-                src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                alt={item}
                 className="h-56 w-full rounded-md object-cover"
+                src={images[index]}
               />
 
               <div className="mt-2">
