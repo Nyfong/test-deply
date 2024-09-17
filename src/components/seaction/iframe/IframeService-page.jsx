@@ -36,7 +36,7 @@ let IframeServicePage = () => {
               type="submit"
               class="px-8 py-4 bg-black text-white hover:bg-blue-700"
             >
-              Submit
+              submit
             </button>
           </form>
         </div>
