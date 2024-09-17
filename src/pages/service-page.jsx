@@ -25,11 +25,16 @@ let Servicepage = () => {
     <>
       <HerobannerServiePage />
       <main className=" max-w-screen-xl min-w-80 mx-auto ">
-        <section className="flex justify-between">
-          <SearchBar />
-          <SearchLocation />
+        {/* search */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 z-10  lg:px-0 ">
+          <div className="px-6 lg:px-0">
+            <SearchBar />
+          </div>
+          <div className="flex justify-start lg:justify-end items-center">
+            <SearchLocation />
+          </div>
         </section>
-        <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-[30px] md:px-[100px] gap-5 md:gap-4  ">
+        <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 max-w-screen-xl min-w-80 mx-auto  ">
           {imageList.map((item) => (
             <div>
               {/* <CardService imgUrl={item} /> */}
@@ -37,8 +42,10 @@ let Servicepage = () => {
             </div>
           ))}
         </section>
-        <OurClient />
-        <IframeServicePage />
+        <section className="max-w-screen-xl min-w-80 mx-auto">
+          <OurClient />
+          <IframeServicePage />
+        </section>
       </main>
     </>
   );

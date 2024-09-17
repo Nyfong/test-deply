@@ -10,12 +10,19 @@ import {
 export const ServiceListing = () => {
   return (
     <>
-      <section className="flex justify-between  z-10 max-w-screen-xl min-w-80 mx-auto">
-        <SearchBar />
-        <SearchLocation />
-      </section>
-      <main className=" max-w-screen-xl min-w-80 mx-auto">
-        <CardServiceListing />
+      <main className="max-w-screen-xl min-w-80 mx-auto ">
+        {/* search */}
+        <section className="grid grid-cols-1 lg:grid-cols-2 z-10  lg:px-0 ">
+          <div className="px-6 lg:px-0">
+            <SearchBar />
+          </div>
+          <div className="flex justify-start lg:justify-end items-center">
+            <SearchLocation />
+          </div>
+        </section>
+        <section className=" ">
+          <CardServiceListing />
+        </section>
       </main>
     </>
   );

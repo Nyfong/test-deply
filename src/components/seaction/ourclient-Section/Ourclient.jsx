@@ -2,7 +2,7 @@ let OurClient = () => {
   return (
     <div>
       <section className="py-24 ">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto ">
           <div className="mb-20 text-center">
             <span className="text-indigo-600 text-center font-medium mb-4 block">
               OUR PARTNERS

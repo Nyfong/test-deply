@@ -16,7 +16,7 @@ export function CardServiceListing() {
       <section>
         {indexList.map((el) => (
           <div key={el}>
-            <div className="grid justify-center mx-auto ">
+            <div className="grid justify-center mx-auto min-w-80  px-10 xl:p-0">
               <ServiceListingTitle />
               <CarouselImg />
               <ProductCard />

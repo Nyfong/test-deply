@@ -22,7 +22,7 @@ export default {
         price: "16px", // Prices and important figures
         quote: "16px", // Quotes or highlighted text
         lead: "18px", // Lead paragraphs or emphasis
-        code: "14px", // Code snippets or monospaced text
+        desc: "14px", // Code snippets or monospaced text
         footer: "12px", // Footer text
       },
       colors: {

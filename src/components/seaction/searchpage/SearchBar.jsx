@@ -36,7 +36,7 @@ export function SearchBar() {
   };
 
   return (
-    <div className="flex justify-center items-center py-8 w-[500px]">
+    <div className="flex justify-center items-center py-8 w-[500px] ">
       <form className="max-w-lg w-full">
         <div className="flex relative">
           <label

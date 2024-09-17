@@ -1,6 +1,7 @@
 import heroBannerImg from "../assets/img/herobanner.png";
 import SubBanner from "../components/seaction/SubBanner-homepage";
 import Details from "../components/seaction/homepage/Details-section";
+import CardShowService from "../components/cards/homepage/Services-Cards";
 import CardShowTrending from "../components/cards/homepage/Card-show-trending";
 import ServiceSection from "../components/seaction/homepage/Service-section";
 import Footer from "../components/footer/Footer";
@@ -77,9 +78,15 @@ let Homepage = () => {
       <section>
         <Details />
       </section>
-      {/* service section */}
-      <section className=" max-w-screen-xl min-w-80 mx-auto ">
-        <ServiceSection />
+
+      {/* card */}
+      <section>
+        <div className="max-w-screen-xl min-w-80 mx-auto   grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-2 p-5">
+          <CardShowService />
+          <CardShowService />
+          <CardShowService />
+          <CardShowService />
+        </div>
       </section>
     </div>
   );
