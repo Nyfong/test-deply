@@ -1,147 +1,68 @@
 let Details = () => {
   return (
     <div>
-      <section className="bg-gray-900  text-white p-20">
-        <div className=" px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16 grid place-content-center">
-          <div className="max-w-xl">
-            <h2 className="text-3xl font-bold sm:text-4xl">
-              What makes us special
-            </h2>
-
-            <p className="mt-4 text-gray-300 line-clamp-1  md:line-clamp-3 lg:line-clamp-none">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              dolores iure fugit totam iste obcaecati. Consequatur ipsa quod
-              ipsum sequi culpa delectus, cumque id tenetur quibusdam, quos fuga
-              minima.
-            </p>
+      <div class="container mx-auto max-w-5xl flex gap-12 flex-wrap items-start justify-center md:justify-between">
+        <div class="grid gap-4 justify-items-center text-center md:flex-1">
+          <div class=" rounded-full border-8 border-amber-400 p-4 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-14 h-14"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
+              ></path>
+            </svg>
           </div>
-
-          <div className="mt-8 grid grid-cols-1 gap-4 md:mt-16 md:grid-cols-2 md:gap-10 lg:grid-cols-4 place-content-center">
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-gray-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300 line-clamp-1 sm:line-clamp-2 md:line-clamp-3 lg:line-clamp-none">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-gray-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-30 line-clamp-1 sm:line-clamp-2 md:line-clamp-3 lg:line-clamp-none">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-gray-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300 line-clamp-1 sm:line-clamp-2 md:line-clamp-3 lg:line-clamp-none">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
-            </div>
-
-            <div className="flex items-start gap-4">
-              <span className="shrink-0 rounded-lg bg-gray-800 p-4">
-                <svg
-                  className="size-5"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
-                  <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"
-                  ></path>
-                </svg>
-              </span>
-
-              <div>
-                <h2 className="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                <p className="mt-1 text-sm text-gray-300 line-clamp-1 sm:line-clamp-2 md:line-clamp-3 lg:line-clamp-none">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                  cumque tempore est ab possimus quisquam reiciendis tempora
-                  animi! Quaerat, saepe?
-                </p>
-              </div>
-            </div>
-          </div>
+          <h3 class="text-3xl font-bold">Safe</h3>
+          <p>Our products are secure and private out-of-the-box</p>
         </div>
-      </section>
+        <div class="grid gap-4 justify-items-center text-center md:flex-1">
+          <div class=" rounded-full border-8 border-amber-400 p-4 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-14 h-14"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold">Efficient</h3>
+          <p>Feel good about your wallet and the environment</p>
+        </div>
+        <div class="grid gap-4 justify-items-center text-center md:flex-1">
+          <div class=" rounded-full border-8 border-amber-400 p-4 ">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-14 h-14"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-3xl font-bold">Proven</h3>
+          <p>Leading the Smart Home world for 10 years</p>
+        </div>
+      </div>
     </div>
   );
 };

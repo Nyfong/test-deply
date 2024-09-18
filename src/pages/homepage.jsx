@@ -13,7 +13,7 @@ let Homepage = () => {
   return (
     <div>
       {/* Main section */}
-      <main className=" max-w-screen-xl min-w-80 mx-auto ">
+      <main className=" max-w-screen-xl min-w-80 mx-auto  border-t border-gray-200">
         {/* hero banner */}
         <section className=" mb-10 md:mt-0 grid grid-cols-1 md:grid-cols-2 md:p-3 md:gap-4">
           <div className=" flex flex-col justify-center gap-5 ">
@@ -75,7 +75,7 @@ let Homepage = () => {
         </section>
       </main>
       {/* details */}
-      <section>
+      <section className="mb-10">
         <Details />
       </section>
       {/* scroll trigger */}
@@ -83,14 +83,14 @@ let Homepage = () => {
         <ScrollTriggeredCountUp />
       </section>
       {/* card */}
-      <section>
+      {/* <section>
         <div className="max-w-screen-xl min-w-80 mx-auto   grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-2 p-5">
           <CardShowService />
           <CardShowService />
           <CardShowService />
           <CardShowService />
         </div>
-      </section>
+      </section> */}
     </div>
   );
 };

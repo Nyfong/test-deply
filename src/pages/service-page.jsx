@@ -24,7 +24,7 @@ let Servicepage = () => {
   return (
     <>
       <HerobannerServiePage />
-      <main className=" max-w-screen-xl min-w-80 mx-auto  p-5  md:p-0 ">
+      <section className=" max-w-screen-xl min-w-80 mx-auto  p-5  md:p-0 ">
         {/* search */}
         <section className="grid grid-cols-1 lg:grid-cols-2 z-10  lg:px-0 ">
           <div className="px-6 lg:px-0">
@@ -46,7 +46,7 @@ let Servicepage = () => {
           <OurClient />
           <IframeServicePage />
         </section>
-      </main>
+      </section>
     </>
   );
 };

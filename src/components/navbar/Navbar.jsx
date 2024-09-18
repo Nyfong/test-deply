@@ -108,35 +108,10 @@ let Navbar = () => {
           </ul>
 
           {/* Theme toggle */}
-          <div className="col-span-2 flex justify-between items-center lg:col-span-1">
-            <div className="flex gap-4 items-center">
+          <div className="col-span-2 flex  items-center justify-end lg:col-span-1">
+            <div className="flex gap-4 items-center ">
               <i className="fa-regular fa-heart"></i>
               <i className="fa-regular fa-user"></i>
-              <div className="grid place-content-center">
-                <div>
-                  <input
-                    type="checkbox"
-                    id="theme-toggle"
-                    checked={isDarkMode}
-                    onChange={handleToggle}
-                    className="hidden"
-                  />
-                  <label
-                    htmlFor="theme-toggle"
-                    className={`w-14 h-7 rounded-full flex items-center cursor-pointer border-2 border-black ${
-                      isDarkMode ? "bg-gray-800" : "bg-white"
-                    }`}
-                  >
-                    <div
-                      className={`w-6 h-6 rounded-full shadow-md transform transition-transform duration-300 ${
-                        isDarkMode
-                          ? "translate-x-7 bg-gray-300"
-                          : "bg-yellow-500"
-                      }`}
-                    ></div>
-                  </label>
-                </div>
-              </div>
             </div>
           </div>
         </nav>

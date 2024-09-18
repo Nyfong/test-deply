@@ -6,9 +6,9 @@ import animationDataRocket from "../components/animations/rocket.json";
 const Aboutus = () => {
   return (
     <>
-      <main className="max-w-screen-xl min-w-80 mx-auto">
+      <main className="max-w-screen-xl min-w-80 mx-auto border-t border-gray-200">
         {/* top section */}
-        <section className="grid grid-cols-1 place-content-center h-screen border-t border-gray-200">
+        <section className="grid grid-cols-1 place-content-center h-screen ">
           {/* img */}
           <div>
             <Lottie

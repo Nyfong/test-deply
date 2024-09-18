@@ -10,9 +10,9 @@ const Faq = () => {
   };
 
   return (
-    <main>
+    <main className="max-w-screen-xl min-w-80 mx-auto">
       {/* Section 1 */}
-      <section className="flex overflow-hidden h-screen flex-col items-center px-20 pt-10 pb-8 w-full text-center text-amber-500 border-t border-gray-200 rounded-bl-3xl rounded-br-3xl max-md:px-5 max-md:py-24 max-md:max-w-full">
+      <section className="flex  overflow-hidden h-screen flex-col items-center px-20 pt-10 pb-8 w-full text-center text-amber-500 border-t border-gray-200 rounded-bl-3xl rounded-br-3xl max-md:px-5 max-md:py-24 max-md:max-w-full">
         <div className="flex flex-col mb-0 max-w-full w-[731px] max-md:mb-2.5 ">
           <h2 className="self-center text-4xl leading-none max-md:max-w-full">
             How can we help You?
