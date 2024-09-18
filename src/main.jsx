@@ -11,6 +11,9 @@ import ServiceListing from "./pages/servicelisting-page.jsx";
 import SearchPage from "./pages/search-page.jsx";
 import LoginForm from "./pages/form/LoginForm.jsx";
 import SignUpForm from "./pages/form/SignupForm.jsx";
+import Faq from "./pages/Faq.jsx";
+import Aboutus from "./pages/Aboutus.jsx";
+import Test from "./test.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +39,19 @@ const router = createBrowserRouter([
         path: "/searchpage",
         element: <SearchPage />,
       },
+      {
+        path: "/faq",
+        element: <Faq />,
+      },
+      {
+        path: "/a",
+        element: <Test />,
+      },
+      {
+        path: "/aboutus",
+        element: <Aboutus />,
+      },
+
       {
         path: "/login",
         element: <LoginForm />,

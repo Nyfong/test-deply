@@ -6,6 +6,7 @@ import {
 } from "../components/cards/servicelisting/RatingStar";
 import { CarouselImg } from "../components/cards/servicelisting/CarouselImg";
 import ServiceListingTitle from "../components/titles/ServiceListing-title";
+import Test from "../test";
 const count = 4;
 const count2 = 10;
 
@@ -20,7 +21,7 @@ let DetailListingPage = () => {
   return (
     <>
       {/* title descriptipn */}
-      <main className=" max-w-screen-xl min-w-80 mx-auto ">
+      <main className=" max-w-screen-xl min-w-80 mx-auto  p-5  md:p-0 ">
         {/* show image */}
         <section className="grid mb-5 px-10 xl:p-0">
           <ServiceListingTitle />
@@ -220,7 +221,7 @@ let DetailListingPage = () => {
           </section>
         </section>
         {/* comment and rate section */}
-        <section className="">
+        <section className="mb-10">
           <HorizenralLine />
           {/* review */}
           <div>
@@ -249,7 +250,7 @@ let DetailListingPage = () => {
                           <div class="text-gray-500">2 hours ago</div>
                         </div>
                       </div>
-                      <p class="text-quote leading-relaxed mb-6">
+                      <p class="text-quote leading-relaxed mb-6 line-clamp-3 md:line-clamp-5 lg:line-clamp-none">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Sed sit amet lorem nulla. Donec consequat urna a tortor
                         sagittis lobortis.
@@ -298,6 +299,10 @@ let DetailListingPage = () => {
               title="Example"
             ></iframe>
           </div>
+        </section>
+        {/* sugession */}
+        <section>
+          <Test />
         </section>
       </main>
     </>

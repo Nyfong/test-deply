@@ -3,7 +3,7 @@ import { HiOutlineMapPin } from "react-icons/hi2";
 
 export function SearchLocation() {
   return (
-    <div className="w-[300px]">
+    <div className=" w-[280px] md:w-[300px]">
       <form class="mx-auto grid justify-center p-10 max-w-2xl">
         <label
           for="default-search"
@@ -36,7 +36,7 @@ export function SearchBar() {
   };
 
   return (
-    <div className="flex justify-center items-center py-8 w-[500px] ">
+    <div className="flex justify-center items-center py-8 w-[300px] md:w-[500px] ">
       <form className="max-w-lg w-full">
         <div className="flex relative">
           <label
@@ -48,7 +48,7 @@ export function SearchBar() {
           <button
             id="dropdown-button"
             onClick={toggleDropdown}
-            className="flex-shrink-0 z-10 inline-flex items-center p-4 text-sm font-medium text-center text-white bg-amber-400 border border-gray-300 rounded-l-lg hover:bg-amber-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
+            className="flex-shrink-0 z-10 inline-flex items-center p-1 md:p-4 text-sm font-medium text-center text-white bg-amber-400 border border-gray-300 rounded-l-lg hover:bg-amber-600 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700 dark:text-white dark:border-gray-600"
             type="button"
           >
             All Categories{" "}
@@ -71,7 +71,7 @@ export function SearchBar() {
           {isDropdownOpen && (
             <div
               id="dropdown"
-              className="absolute top-full left-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-[140px] dark:bg-gray-700"
+              className="absolute top-full left-0 z-10 bg-white divide-y divide-gray-100 rounded-lg shadow  w-[140px] dark:bg-gray-700"
             >
               <ul
                 className="py-2 text-sm text-gray-700 dark:text-gray-200"

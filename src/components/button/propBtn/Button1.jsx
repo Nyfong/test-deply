@@ -1,13 +1,10 @@
 let Button1 = (props) => {
   return (
-    <div>
-      <a
-        className="block w-full rounded bg-amber-500 px-12 py-3 text-sm font-medium text-white shadow hover:bg-amber-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
-        href="#"
-      >
+    <>
+      <button className="px-6 py-3.5 text-lg leading-tight text-white bg-amber-500 rounded-full">
         {props.title ? props.title : "default"}
-      </a>
-    </div>
+      </button>
+    </>
   );
 };
 

@@ -5,6 +5,10 @@ import CardShowService from "../components/cards/homepage/Services-Cards";
 import CardShowTrending from "../components/cards/homepage/Card-show-trending";
 import ServiceSection from "../components/seaction/homepage/Service-section";
 import Footer from "../components/footer/Footer";
+import Lottie from "lottie-react";
+
+import animationData from "../components/animations/animationGirl.json";
+import ScrollTriggeredCountUp from "../components/scrollTrigger/ScrollTrigger";
 let Homepage = () => {
   return (
     <div>
@@ -59,11 +63,7 @@ let Homepage = () => {
           </div>
           {/* image  */}
           <div className="">
-            <img
-              className=" grid place-content-center"
-              src={heroBannerImg}
-              alt=""
-            />
+            <Lottie animationData={animationData} loop={true}></Lottie>
           </div>
         </section>
         <section>
@@ -78,7 +78,10 @@ let Homepage = () => {
       <section>
         <Details />
       </section>
-
+      {/* scroll trigger */}
+      <section className="max-w-screen-xl min-w-80 mx-auto ">
+        <ScrollTriggeredCountUp />
+      </section>
       {/* card */}
       <section>
         <div className="max-w-screen-xl min-w-80 mx-auto   grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-4 gap-2 p-5">
