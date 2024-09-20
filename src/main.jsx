@@ -13,7 +13,12 @@ import LoginForm from "./pages/form/LoginForm.jsx";
 import SignUpForm from "./pages/form/SignupForm.jsx";
 import Faq from "./pages/Faq.jsx";
 import Aboutus from "./pages/Aboutus.jsx";
+import { ErrorPage } from "./pages/404/ErrorPage.jsx";
 import Test from "./test.jsx";
+import { Profile } from "./pages/Profilepage.jsx";
+import CloneDetails from "./store/CloneDetail.jsx";
+import { CardProfile } from "./pages/profile/CardProfile.jsx";
+import { TestAPI } from "./store/TestAPI.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +37,10 @@ const router = createBrowserRouter([
         element: <DetailListingPage />,
       },
       {
+        path: "/api/:id",
+        element: <CloneDetails />,
+      },
+      {
         path: "/productListingpage",
         element: <ServiceListing />,
       },
@@ -46,6 +55,18 @@ const router = createBrowserRouter([
       {
         path: "/a",
         element: <Test />,
+      },
+      {
+        path: "/api",
+        element: <TestAPI />,
+      },
+      {
+        path: "/acc",
+        element: <Profile />,
+      },
+      {
+        path: "*",
+        element: <ErrorPage />,
       },
       {
         path: "/aboutus",

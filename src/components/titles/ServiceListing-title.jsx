@@ -4,13 +4,13 @@ import { HiOutlineArrowUpOnSquare } from "react-icons/hi2";
 import { HiOutlineHeart } from "react-icons/hi2";
 import { RatingBar, RatingReview } from "../cards/servicelisting/RatingStar";
 
-let ServiceListingTitle = () => {
+let ServiceListingTitle = ({ name }) => {
   return (
     <>
       <div className="grid   grid-cols-1 lg:grid-cols-2 mb-5  ">
         <div className="grid grid-cols-1">
           <h3 className="font-bold mb-3 text-[24px] lg:text[34px]">
-            Bordeaux Getaway
+            {name || "default name"}
           </h3>
           <div className="grid grid-cols-3 place-content-center gap-3  text-[10px] md:text-subheader">
             <RatingReview />

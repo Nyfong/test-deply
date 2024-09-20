@@ -1,7 +1,7 @@
 import { HiOutlineSquares2X2 } from "react-icons/hi2";
 import { RatingBar } from "./cards/servicelisting/RatingStar";
 import { RatingReview } from "./cards/servicelisting/RatingStar";
-export let ProductCard = () => {
+export let ProductCard = ({ image }) => {
   return (
     <>
       <section>
@@ -16,8 +16,8 @@ export let ProductCard = () => {
             <div className="lg:grid grid-cols-8 grid-rows-2 hidden gap-4">
               <div className=" col-span-4 row-span-2 w-full rounded-lg hover:shadow-lg overflow-hidden">
                 <img
+                  src={image}
                   className="w-full h-full object-cover"
-                  src="https://i.pinimg.com/564x/72/c9/21/72c921591058bba1215c367dc0d91708.jpg"
                   alt=""
                 />
               </div>
