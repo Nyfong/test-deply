@@ -9,6 +9,7 @@ import ServiceListingTitle from "../components/titles/ServiceListing-title";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "./getAllProduct";
+import LogoGP from "../assets/img/LogoCP1.png";
 import Test from "../test";
 const count = 4;
 const count2 = 10;
@@ -40,7 +41,10 @@ let CloneDetails = () => {
         {/* show image */}
         <section className="grid mb-5 px-10 xl:p-0">
           <ServiceListingTitle name={fetchSignleProduct.name} />
-          <CarouselImg />
+          <CarouselImg
+            image={fetchSignleProduct.image}
+            name={fetchSignleProduct.name}
+          />
           <ProductCard image={fetchSignleProduct.image} />
         </section>
         {/* details sections */}
@@ -51,28 +55,24 @@ let CloneDetails = () => {
               {/* owner of that product */}
               <div className="grid grid-cols-2  mb-10">
                 <div>
-                  <h2 className="font-bold text-body">hiii</h2>
+                  <h2 className="font-bold text-body">
+                    {fetchSignleProduct.name}
+                  </h2>
                   {/* liitle details  */}
-                  <div className="text-gray-200 grid grid-cols-4">
-                    <div className="text-desc">
-                      <p>2 beds</p>
+                  <div className="text-gray-300 grid grid-cols-3 gap-5">
+                    <div className="text-body font-bold">
+                      <p>{`Start time:${fetchSignleProduct.start_time}AM`}</p>
                     </div>
-                    <div className="text-desc">
-                      <p>2 beds</p>
-                    </div>
-                    <div className="text-desc">
-                      <p>2 beds</p>
-                    </div>
-                    <div className="text-desc">
-                      <p>2 beds</p>
+                    <div className="text-body font-bold">
+                      <p>{`End time:${fetchSignleProduct.end_time}PM`}</p>
                     </div>
                   </div>
                 </div>
                 {/* image */}
                 <div className="flex justify-end itemsc-center">
                   <img
-                    className="w-8 h-8 rounded-full object-cover"
-                    src="https://www.perfocal.com/blog/content/images/2021/01/Perfocal_17-11-2019_TYWFAQ_100_standard-3.jpg"
+                    className="w-8 h-8  rounded-full  object-contain"
+                    src={LogoGP}
                     alt=""
                   />
                 </div>
@@ -133,7 +133,7 @@ let CloneDetails = () => {
                 <div className="text-center mb-6">
                   <div className="grid grid-cols-2">
                     <span className="block text-5xl font-bold text-gray-800 mb-10">
-                      $15
+                      ${fetchSignleProduct.price}
                     </span>
                     <h5 className="text-2xl font-semibold text-gray-800 mb-10">
                       Standard

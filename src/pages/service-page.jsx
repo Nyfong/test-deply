@@ -2,7 +2,10 @@ import CardService from "../components/cards/servicepage/Card-service";
 import HerobannerServiePage from "../components/seaction/servicepage/HeroBanner";
 import IframeServicePage from "../components/seaction/iframe/IframeService-page";
 import Footer from "../components/footer/Footer";
+import { Link } from "react-router-dom";
 import CardShowService from "../components/cards/homepage/Services-Cards";
+import Button1 from "../components/button/propBtn/Button1";
+
 import {
   SearchBar,
   SearchLocation,
@@ -26,13 +29,16 @@ let Servicepage = () => {
       <HerobannerServiePage />
       <section className=" max-w-screen-xl min-w-80 mx-auto  p-5  md:p-0 ">
         {/* search */}
-        <section className="grid grid-cols-1 lg:grid-cols-2 z-10  lg:px-0 ">
+        {/* <section className="grid grid-cols-1 lg:grid-cols-2 z-10  lg:px-0 ">
           <div className="px-6 lg:px-0">
             <SearchBar />
           </div>
           <div className="flex justify-start lg:justify-end items-center">
             <SearchLocation />
           </div>
+        </section> */}
+        <section className="pt-10 flex justify-end">
+          <Button1 title="Get start" />
         </section>
         <section className="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 max-w-screen-xl min-w-80 mx-auto  ">
           {imageList.map((item) => (

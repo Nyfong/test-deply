@@ -18,7 +18,8 @@ import Test from "./test.jsx";
 import { Profile } from "./pages/Profilepage.jsx";
 import CloneDetails from "./store/CloneDetail.jsx";
 import { CardProfile } from "./pages/profile/CardProfile.jsx";
-import { TestAPI } from "./store/TestAPI.jsx";
+import { TestAPI } from "./store/ServiceListingwithAPI.jsx";
+import GeminiChatBot from "./components/AI-chatbot/GeminiChatBot.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/api",
         element: <TestAPI />,
+      },
+      {
+        path: "/ai",
+        element: <GeminiChatBot />,
       },
       {
         path: "/acc",

@@ -10,7 +10,7 @@ const Faq = () => {
   };
 
   return (
-    <main className="max-w-screen-xl min-w-80 mx-auto">
+    <main className="max-w-screen-xl min-w-80 mx-auto ">
       {/* Section 1 */}
       <section className="flex  overflow-hidden h-screen flex-col items-center px-20 pt-10 pb-8 w-full text-center text-amber-500 border-t border-gray-200 rounded-bl-3xl rounded-br-3xl max-md:px-5 max-md:py-24 max-md:max-w-full">
         <div className="flex flex-col mb-0 max-w-full w-[731px] max-md:mb-2.5 ">
@@ -30,7 +30,7 @@ const Faq = () => {
       </section>
 
       {/* Section 2: Navigation */}
-      <section className="flex flex-wrap gap-10 justify-center items-center text-4xl leading-none text-center text-black whitespace-nowrap mt-10">
+      <section className="flex flex-wrap gap-10 justify-center items-center text-4xl leading-none text-center  text-black whitespace-nowrap mt-10">
         <article
           onClick={() => handleFaqClick("general")}
           className="flex overflow-hidden flex-col justify-center self-stretch px-9 py-12 my-auto text-4xl leading-none bg-white rounded-3xl border-solid border-[3px] border-gray-300 hover:bg-yellow-300 hover:border-yellow-300 transition duration-300 min-w-[240px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] w-[300px] max-md:px-5 cursor-pointer"
@@ -82,7 +82,7 @@ const Faq = () => {
                 ? "Card FAQ"
                 : "Individual FAQ"}
             </h2>
-            <p className="mt-3 text-lg text-neutral-500 md:text-xl">
+            <p className="mt-3 text-lg text-neutral-500  md:text-xl">
               Frequently asked questions about{" "}
               {selectedFaq === "general"
                 ? "general topics"
@@ -99,7 +99,7 @@ const Faq = () => {
               <>
                 <div className="py-5">
                   <details className="group">
-                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <summary className="flex cursor-pointer list-none items-center text-black justify-between font-medium">
                       <span>How do I find the best businesses in my area?</span>
                       <span className="transition group-open:rotate-180">
                         <svg
@@ -125,7 +125,7 @@ const Faq = () => {
 
                 <div className="py-5">
                   <details className="group">
-                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <summary className="flex cursor-pointer list-none text-black  items-center justify-between font-medium">
                       <span>
                         How can I submit a new business to the platform?
                       </span>
@@ -153,7 +153,7 @@ const Faq = () => {
                 </div>
                 <div className="py-5">
                   <details className="group">
-                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <summary className="flex cursor-pointer list-none items-center text-black  justify-between font-medium">
                       <span>What do the star ratings mean?</span>
                       <span className="transition group-open:rotate-180">
                         <svg
@@ -178,7 +178,7 @@ const Faq = () => {
                 </div>
                 <div className="py-5">
                   <details className="group">
-                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <summary className="flex cursor-pointer list-none text-black  items-center  justify-between font-medium">
                       <span>
                         Can I bookmark businesses I want to visit later?
                       </span>
@@ -210,7 +210,7 @@ const Faq = () => {
               <>
                 <div className="py-5">
                   <details className="group">
-                    <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
+                    <summary className="flex cursor-pointer list-none text-black  items-center justify-between font-medium">
                       <span>
                         {" "}
                         How do I promote my business on the platform?
@@ -451,7 +451,7 @@ const Faq = () => {
         <p className="text-xl leading-normal max-md:max-w-full mb-6">
           Contact us and we’ll get back to you as soon as possible.
         </p>
-        <button className="px-6 py-3.5 text-lg leading-tight text-white bg-amber-500 rounded-full">
+        <button className="px-6 py-3.5 text-lg leading-tight text-white  bg-amber-500 rounded-full">
           Contact Us
         </button>
       </section>

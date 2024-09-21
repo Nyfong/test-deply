@@ -1,9 +1,13 @@
-import logo1 from "../../assets/img/logo1.png";
+import logo1 from "../../assets/img/LogoCP1.png";
 
-let Footer = () => {
+let Footer = ({ isDarkMode }) => {
   return (
     <div>
-      <footer className="bg-white">
+      <footer
+        className={
+          isDarkMode ? "bg-gray-900 text-white" : "bg-white text-black"
+        }
+      >
         <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <div>

@@ -6,26 +6,26 @@ const cardData = [
   {
     id: 1,
     count: 100,
-    title: "Card 1",
-    description: "This is the first card.",
+    title: "",
+    description: "",
   },
   {
     id: 2,
     count: 200,
-    title: "Card 2",
-    description: "This is the second card.",
+    title: "",
+    description: "",
   },
   {
     id: 3,
     count: 300,
-    title: "Card 3",
-    description: "This is the third card.",
+    title: "",
+    description: "",
   },
   {
     id: 4,
     count: 400,
-    title: "Card 4",
-    description: "This is the fourth card.",
+    title: "",
+    description: "",
   },
 ];
 

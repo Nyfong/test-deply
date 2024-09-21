@@ -16,6 +16,7 @@ export let ProductCard = ({ image }) => {
             <div className="lg:grid grid-cols-8 grid-rows-2 hidden gap-4">
               <div className=" col-span-4 row-span-2 w-full rounded-lg hover:shadow-lg overflow-hidden">
                 <img
+                  // src="https://i.pinimg.com/564x/1f/86/9f/1f869f2fdf12fa61dd33245746029e54.jpg"
                   src={image}
                   className="w-full h-full object-cover"
                   alt=""

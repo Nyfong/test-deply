@@ -3,6 +3,16 @@ import Lottie from "lottie-react";
 import animationData from "../components/animations/aboutus.json";
 import animationDataGoal from "../components/animations/goal.json";
 import animationDataRocket from "../components/animations/rocket.json";
+import AvatarAboutUs from "../components/cards/aboutus/Avatar";
+const Name = [
+  "Ny Fong",
+  "Oun Soriya",
+  "Oun Mekara",
+  "Chea Muoyheang",
+  "Chhim Theara",
+  "Sam Nisa",
+  "Touch Rathana",
+];
 const Aboutus = () => {
   return (
     <>
@@ -62,7 +72,7 @@ const Aboutus = () => {
             </span>
           </div>
         </section>
-        <section className="flex flex-col justify-center items-center  w-full text-black min-h-[450px] max-md:mt-10 max-md:max-w-full">
+        <section className="flex hidden flex-col justify-center items-center  w-full text-black min-h-[450px] max-md:mt-10 max-md:max-w-full">
           <div className="flex flex-col justify-center p-2.5 max-w-full w-[1034px]">
             <div className="flex gap-10 items-center w-full min-h-[345px] max-md:max-w-full">
               <img
@@ -144,112 +154,14 @@ const Aboutus = () => {
                 These people work on making our product best.
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full">
-              <div className="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div className="relative mb-5">
-                  <img
-                    src="https://static.wikia.nocookie.net/misterbeast/images/0/0b/Ishowspeed.jpg/revision/latest?cb=20221117212602"
-                    alt="Marvin image"
-                    className="w-28 h-28 rounded-2xl object-cover mx-auto transition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"
-                  />
+
+            <div className="flex flex-wrap gap-10 justify-center gap-y-14 max-w-3xl mx-auto lg:max-w-full">
+              {/* name */}
+              {Name.map((name, index) => (
+                <div key={index} className="avatar-item">
+                  <AvatarAboutUs name={name} />
                 </div>
-                <h4 className="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">
-                  Ny Fong
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  Frond-end
-                </span>
-              </div>
-              <div className="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div className="relative mb-5">
-                  <img
-                    src="https://static.wikia.nocookie.net/misterbeast/images/0/0b/Ishowspeed.jpg/revision/latest?cb=20221117212602"
-                    alt="Kathryn image"
-                    className="w-28 h-28 rounded-2xl object-cover mx-auto transition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"
-                  />
-                </div>
-                <h4 className="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">
-                  Chim Theara
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  Frond-end
-                </span>
-              </div>
-              <div className="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div className="relative mb-5">
-                  <img
-                    src="https://static.wikia.nocookie.net/misterbeast/images/0/0b/Ishowspeed.jpg/revision/latest?cb=20221117212602"
-                    alt="Jerome image"
-                    className="w-28 h-28 rounded-2xl object-cover mx-auto transition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"
-                  />
-                </div>
-                <h4 className="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">
-                  Chea Soriya
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  Frond-end
-                </span>
-              </div>
-              <div className="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div className="relative mb-5">
-                  <img
-                    src="https://static.wikia.nocookie.net/misterbeast/images/0/0b/Ishowspeed.jpg/revision/latest?cb=20221117212602"
-                    alt="Wade image"
-                    className="w-28 h-28 rounded-2xl object-cover mx-auto transition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"
-                  />
-                </div>
-                <h4 className="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">
-                  Chhea Muoyheang
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  Frond-end
-                </span>
-              </div>
-              <div className="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div className="relative mb-5">
-                  <img
-                    src="https://static.wikia.nocookie.net/misterbeast/images/0/0b/Ishowspeed.jpg/revision/latest?cb=20221117212602"
-                    alt="Leslie image"
-                    className="w-28 h-28 rounded-2xl object-cover mx-auto transition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"
-                  />
-                </div>
-                <h4 className="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">
-                  Sam Nisa
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  Frond-end
-                </span>
-              </div>
-              <div className="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div className="relative mb-5">
-                  <img
-                    src="https://static.wikia.nocookie.net/misterbeast/images/0/0b/Ishowspeed.jpg/revision/latest?cb=20221117212602"
-                    alt="Ronald image"
-                    className="w-28 h-28 rounded-2xl object-cover mx-auto transition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"
-                  />
-                </div>
-                <h4 className="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">
-                  Toch Ratana
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  Frond-end
-                </span>
-              </div>
-              <div className="group block text-center lg:w-1/5 sm:w-1/3 min-[450px]:w-1/2 w-full">
-                <div className="relative mb-5">
-                  <img
-                    src="https://static.wikia.nocookie.net/misterbeast/images/0/0b/Ishowspeed.jpg/revision/latest?cb=20221117212602"
-                    alt="Devon image"
-                    className="w-28 h-28 rounded-2xl object-cover mx-auto transition-all duration-500 border-2 border-solid border-transparent group-hover:border-indigo-600"
-                  />
-                </div>
-                <h4 className="text-xl text-gray-900 font-semibold text-center mb-2 transition-all duration-500 group-hover:text-indigo-600">
-                  Oun Markara
-                </h4>
-                <span className="text-gray-500 text-center block transition-all duration-500 group-hover:text-gray-900">
-                  Frond-end
-                </span>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -287,8 +199,8 @@ const Aboutus = () => {
           <div className="flex flex-col px-2.5 pt-2.5 w-full min-h-[803px] max-md:max-w-full">
             <div className="flex flex-col justify-center p-2.5 w-full max-md:max-w-full">
               <div className="flex flex-col w-full max-md:max-w-full mt-[100px]">
-                <h2 className="text-4xl leading-none text-center text-black max-md:max-w-full">
-                  Contact Us
+                <h2 className="text-4xl leading-none text-center   max-md:max-w-full">
+                  <span className="text-white">Contact Us</span>
                 </h2>
                 <div className="flex flex-col justify-center items-center mt-20 w-full max-md:mt-10 max-md:max-w-full">
                   <div className="flex flex-col max-w-full rounded-none w-[1196px]">

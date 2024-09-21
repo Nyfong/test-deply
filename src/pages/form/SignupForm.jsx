@@ -1,150 +1,215 @@
-import React, { useState } from "react";
-import { Link } from 'react-router-dom'; // Import Link
+import React from "react";
+import { Link } from "react-router-dom";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { register } from "../auth/authAction"; // Correct path
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-const SignUpForm = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+export default function SignUpForm() {
+  const regex =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Name:", name);
-    console.log("Email:", email);
-    console.log("Password:", password);
-    console.log("Confirm Password:", confirmPassword);
-    // Handle signup logic here
+  const initialValues = {
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
   };
 
-  const PasswordInput = ({ password, setPassword }) => {
-    const [showPassword, setShowPassword] = useState(false);
-    
-    const togglePasswordVisibility = () => {
-      setShowPassword(!showPassword);
-    };
-  
-    return (
-      <div className="mb-4">
-        <label className="block text-gray-700" htmlFor="password">Create a password</label>
-        <div className="relative mt-2">
-          <input
-            type={showPassword ? 'text' : 'password'}
-            id="password"
-            className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-            placeholder="Enter your password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button
-            type="button"
-            onClick={togglePasswordVisibility}
-            className="absolute right-2 top-2 text-gray-500"
-          >
-            {showPassword ? 'Hide' : 'Show'}
-          </button>
-        </div>
-        <p className="block text-gray-700">Use 8 or more characters with a mix of letters, numbers & symbols</p>
-      </div>
-    );
+  const validationSchema = Yup.object({
+    username: Yup.string().required("Username is required"),
+    email: Yup.string().email("Email is invalid").required("Email is required"),
+    password: Yup.string()
+      .matches(
+        regex,
+        "Password must contain at least 8 characters, one uppercase, one lowercase, one number, and one special character"
+      )
+      .required("Password is required"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("password"), null], "Passwords must match")
+      .required("Confirm password is required"),
+  });
+
+  // Handle Register
+  const handleRegister = async (values) => {
+    const registerData = await register(values);
+    registerData?.status
+      ? toast.error(registerData.message)
+      : toast.success(registerData.message);
+    console.log("RegisterData", registerData);
   };
-  
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="w-full max-w-2xl mx-auto flex flex-col md:flex-row bg-white rounded-lg shadow-lg">
-
-
-        <div className="w-full md:w-full flex flex-col py-5 px-10">
-          <h1 className="text-3xl font-semibold text-center text-blue-600">Creat an account</h1>
-          <div className="mt-4 text-center">
-            <p className="text-gray-600">
-              Already have an account? <Link as={Link} to="/login" className="text-blue-600 font-semibold underline underline-offset-1 ">Log in</Link>
-            </p>
-          </div>
-         
-
-          <form className="mt-4" onSubmit={handleSubmit}>
-            <div className="mb-4">
-              <label className="block text-gray-700" htmlFor="name">What shoud we call you?</label>
-              <input
+    <>
+      <section className="flex justify-center my-3 ">
+        <Formik
+          initialValues={initialValues}
+          validationSchema={validationSchema}
+          onSubmit={(values, { resetForm }) => {
+            handleRegister(values);
+            resetForm();
+          }}
+        >
+          <Form className="w-1/2 bg-grey-100 p-5  rounded-md">
+            <h1 className="text-3xl font-semibold text-center text-semiBlue-600">
+              Create an account
+            </h1>
+            <div className="mt-4 text-center">
+              <p className="text-gray-600">
+                Already have an account?{" "}
+                <Link
+                  to="/login"
+                  className="text-semiBlue-600 font-semibold underline underline-offset-1"
+                >
+                  Log in
+                </Link>
+              </p>
+            </div>
+            {/* Username */}
+            <div className="mt-5">
+              <label
+                htmlFor="username"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                What should we call you?
+              </label>
+              <Field
                 type="text"
-                id="name"
-                className="border mt-2 border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="enter your profile account"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
+                name="username"
+                id="username"
+                className="bg-gray-50 border border-grey-300 text-grey-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter your profile name"
+              />
+              <ErrorMessage
+                name="username"
+                className="text-primary-600"
+                component="div"
               />
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-700" htmlFor="email">What is your Email?</label>
-              <input
+
+            {/* Email */}
+            <div className="mt-5">
+              <label
+                htmlFor="email"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                What is your Email?
+              </label>
+              <Field
                 type="email"
+                name="email"
                 id="email"
-                className="border mt-2 border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
-                placeholder="Enter your Email address"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
+                className="bg-gray-50 border border-grey-300 text-grey-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter your email address"
+              />
+              <ErrorMessage
+                name="email"
+                className="text-primary-600"
+                component="div"
               />
             </div>
-           
-            <PasswordInput password={password} setPassword={setPassword} />
 
-            
+            {/* Password */}
+            <div className="mt-5">
+              <label
+                htmlFor="password"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Create a password
+              </label>
+              <Field
+                type="password"
+                name="password"
+                id="password"
+                className="bg-gray-50 border border-grey-300 text-grey-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Enter Password"
+              />
+              <ErrorMessage
+                name="password"
+                className="text-primary-600"
+                component="div"
+              />
+            </div>
 
-            <div className="flex justify-between mt-6">
-              <div className="flex items-center mb-4">
-                <input type="checkbox" id="terms" className="mr-2" />
-                <label htmlFor="terms" className="text-gray-600">I agree with all terms and privacy policy</label>
+            {/* Confirm Password */}
+            <div className="mt-5">
+              <label
+                htmlFor="confirmPassword"
+                className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+              >
+                Confirm your password
+              </label>
+              <Field
+                type="password"
+                name="confirmPassword"
+                id="confirmPassword"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-300 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Confirm Password"
+              />
+              <ErrorMessage
+                name="confirmPassword"
+                className="text-primary-600"
+                component="div"
+              />
+            </div>
+
+            {/* Social Media Buttons */}
+            <div className="mt-2">
+              <div className="flex items-center">
+                <hr className="flex-grow border-gray-300" />
+                <span className="mx-2 text-gray-600">Or continue with</span>
+                <hr className="flex-grow border-gray-300" />
               </div>
-              <a href="#" className="text-blue-600 text-sm mb-4 block text-right">Forget password?</a>
+
+              <div className="flex flex-col space-y-2 mt-3">
+                {/* Continue with Google */}
+                <button className="border text-black border-grey-500  rounded-2xl  py-2 flex items-center justify-center hover:bg-grey-100 transition">
+                  <div className="flex ">
+                    <span className="mr-2">
+                      <img
+                        className="w-8 ml-1 h-8 object-cover rounded-l-lg"
+                        src="/src/assets/login/google.png"
+                        alt="Google"
+                      />
+                    </span>
+                    <p>Continue with Google</p>
+                  </div>
+                </button>
+
+                {/* Continue with Facebook */}
+                <button className="border text-black border-grey-500 rounded-2xl  py-2 flex items-center justify-center hover:bg-grey-100 transition">
+                  <div className="flex">
+                    <span className="ml-6">
+                      <img
+                        className="w-7 h-7 object-cover rounded-l-lg"
+                        src="/src/assets/login/fb.png"
+                        alt="Facebook"
+                      />
+                    </span>
+                    <p className="ml-2">Continue with Facebook</p>
+                  </div>
+                </button>
+                {/* Continue with Apple */}
+                <button className="border text-black border-grey-500  rounded-2xl  py-2 flex items-center justify-center hover:bg-grey-100 transition">
+                  <div className="flex">
+                    <span className="mr-2">
+                      <img
+                        className="w-8 h-8 object-cover rounded-l-lg"
+                        src="/src/assets/login/apple.png"
+                        alt="Apple"
+                      />
+                    </span>
+                    <p>Continue with Apple</p>
+                  </div>
+                </button>
+              </div>
             </div>
 
-            <button type="submit" className="bg-yellow-500 text-white font-bold py-2 rounded-lg w-full hover:bg-yellow-600 transition">Create an account</button>
-          </form>
-
-         
-
-          <div className="mt-2">
-            <div className="flex items-center ">
-              <hr className="flex-grow border-gray-300" />
-              <span className="mx-2 text-gray-600">Or continue with</span>
-              <hr className="flex-grow border-gray-300" />
-            </div>
-
-            <div className="flex flex-col space-y-2 mt-3">
-              <button className="border border-gray-300 rounded-lg py-2 flex items-center justify-center hover:bg-gray-100 transition">
-                <div className="flex">
-                  <span className="mr-2">
-                    <img className="w-8 h-8 object-cover rounded-l-lg" src="/login/google.png" alt="Google" />
-                  </span>
-                  <p>Continue with Google</p>
-                </div>
-              </button>
-              <button className="border border-gray-300 rounded-lg py-2 flex items-center justify-center hover:bg-gray-100 transition">
-                <div className="flex">
-                  <span className="ml-6">
-                    <img className="w-7 h-7 object-cover rounded-l-lg" src="/login/fb.png" alt="Facebook" />
-                  </span>
-                  <p className="ml-2">Continue with Facebook</p>
-                </div>
-              </button>
-              <button className="border border-gray-300 rounded-lg py-2 flex items-center justify-center hover:bg-gray-100 transition">
-                <div className="flex">
-                  <span className="mr-2">
-                    <img className="w-8 h-8 object-cover rounded-l-lg" src="/login/apple.jpeg" alt="Apple" />
-                  </span>
-                  <p>Continue with Apple</p>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <ToastContainer />
+          </Form>
+        </Formik>
+      </section>
+    </>
   );
-};
-
-export default SignUpForm;
+}
