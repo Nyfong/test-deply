@@ -8,7 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 export default function SignUpForm() {
   const regex =
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{3 ,}$/;
 
   const initialValues = {
     username: "",
@@ -205,7 +205,14 @@ export default function SignUpForm() {
                 </button>
               </div>
             </div>
-
+            <div className="text-center mt-5">
+              <button
+                type="submit "
+                className="p-4 bg-blue-500 text-white rounded-lg"
+              >
+                Sign up
+              </button>
+            </div>
             <ToastContainer />
           </Form>
         </Formik>

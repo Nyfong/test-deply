@@ -13,7 +13,7 @@ let Homepage = () => {
   return (
     <div>
       {/* Main section */}
-      <main className=" max-w-screen-xl min-w-80 mx-auto  border-t border-gray-200">
+      <main className=" max-w-screen-xl min-w-80 mx-auto p-5 border-t border-gray-200">
         {/* hero banner */}
         <section className=" mb-10 md:mt-0 grid grid-cols-1 md:grid-cols-2 md:p-3 md:gap-4">
           <div className=" flex flex-col justify-center gap-5 ">

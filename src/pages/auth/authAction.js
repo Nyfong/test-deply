@@ -1,4 +1,4 @@
-const base_url = "https://jobfinder.automatex.dev/api/";
+const base_url = "https://easyfound.automatex.dev/api/";
 
 //register
 export async function register(values) {
